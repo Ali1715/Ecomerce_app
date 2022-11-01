@@ -1,5 +1,7 @@
 import 'package:application_ecomerce/pages/catalogo.dart';
 import 'package:application_ecomerce/pages/homepage.dart';
+import 'package:application_ecomerce/pages/login.dart';
+import 'package:application_ecomerce/pages/register_screen.dart';
 import 'package:application_ecomerce/pages/singup.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -19,22 +21,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Ecommerce App',
+      initialRoute: 'login',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
+       
+        primarySwatch: Colors.orange,
       ),
-      home: HomePage(),
+      //home: HomePage(),
       routes: {
         'Catalogo_page': (context) => CatalogoPage(),
+        'login' : (_) => LoginScreen(),
+        'register': (_) => RegisterScreen(),
+
+
       },
     );
   }
